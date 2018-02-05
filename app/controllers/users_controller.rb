@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       else
           if params[:login_password] == @user.pasword
             session[:username] = @user.username
-             #puts @user
+              puts @user
               session[:user_id] = @user.id
               session[:game_ended] = 'false'
               redirect_to user_path(@user)
@@ -51,8 +51,9 @@ class UsersController < ApplicationController
 
         id = params[:id]
         @user = User.find(id)
-
+        puts @user
         print session["record"]
+        puts session["record"]
         session[:new_game] = 'true'
         if session[:game_ended] == 'true'
             save_user_game_info
