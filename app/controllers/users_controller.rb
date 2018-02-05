@@ -143,7 +143,7 @@ class UsersController < ApplicationController
             
             @user.wins ||= ""
             @user.losses ||= ""
-            @user.song_names ||= ""
+            @user.songs ||= ""
             @user.records ||= ""
             @user.save!
             set_user_stats
