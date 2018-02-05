@@ -50,7 +50,7 @@ class UsersController < ApplicationController
         session["song_names"] ||= ""
 
         id = params[:id]
-        @user = User.find(id)
+        #@user = User.find(id)
         puts @user
         print session["record"]
         puts session["record"]
