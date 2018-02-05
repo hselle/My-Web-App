@@ -13,8 +13,8 @@ class UsersController < ApplicationController
     end
 
     def login
-      #puts params[:login_username]
-      #puts params[:login_password]
+      puts params[:login_username]
+      puts params[:login_password]
       session["song_names"] = ""
       session["record"] = ""
       session["song_names"] = ""
