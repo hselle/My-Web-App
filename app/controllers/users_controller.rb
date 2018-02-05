@@ -67,7 +67,7 @@ class UsersController < ApplicationController
         puts @user.wins
         puts @user.losses
 
-        if @user.wins.include?("w") || @user.losses.include?("l")
+        if @user.wins.include? "w" || @user.losses.include? "l"
             correct_answers_number = @user.wins.length
             incorrect_answers_number = @user.losses.length
             if correct_answers_number != 0 || incorrect_answers_number != 0
@@ -87,7 +87,7 @@ class UsersController < ApplicationController
     
     def set_user_game_records
         @game_records = []
-        if @user.records.include?(",")
+        if @user.records.include? ","
             game_record_strings_array = @user.records.split(",")
             for i in 1...game_record_strings_array.length
                 @game_records[i-1] = game_record_strings_array[i].split("")
@@ -97,7 +97,7 @@ class UsersController < ApplicationController
     
     def set_user_game_songs
         @game_songs = []
-        if @user.songs.include?("|||") 
+        if @user.songs.include? "|||"
             puts 'got songs'
             game_song_strings_array = @user.songs.split("|||")
             for i in 1...game_song_strings_array.length
