@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       #puts params[:login_password]
       session["song_names"] = ""
       session["record"] = ""
-      session["song_names"] = ""
+      session["songs"] = ""
 
       puts params
       @user = User.find_by_username(params[:login_username])
